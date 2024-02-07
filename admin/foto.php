@@ -49,7 +49,7 @@ if ($_SESSION['status'] != 'login') {
 							<label class="form-label">Deskripsi</label>
 							<textarea class="form_control"
 							 name="deskripsifoto" required></textarea>
-                             <label class="form-label">Album</label>
+                            <label class="form-label">Album</label>
                              <select class="form-control" name="albumid">
                             <?php
                             $sql_album = mysqli_query($koneksi, "SELECT * FROM album");
@@ -67,13 +67,14 @@ if ($_SESSION['status'] != 'login') {
 		</div>
 		<div class="col-md-8">
 			<div class="card mt-2">
-				<div class="card-header"></div>
+				<div class="card-header">Data Galeri Foto</div>
 				<div class="card-body">
 					<table class="table">
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Nama Album</th>
+								<th>Foto</th>
+								<th>Judul Foto</th>
 								<th>Deskripsi</th>
 								<th>Tanggal</th>
 								<th>Aksi</th>
@@ -81,7 +82,7 @@ if ($_SESSION['status'] != 'login') {
 						</thead>
 						<tbody>
 							<?php
-							&no = 1;
+							$no = 1;
 							$userid = $_SESSION['userid'];
 							$sql = mysqli_query($koneksi, "SELECT * FROM album WHERE userid='$userid'");
 							while ($data = mysqli_fetch_array($sql)) {
@@ -89,14 +90,15 @@ if ($_SESSION['status'] != 'login') {
 							 ?>
 							<tr>
 								<td><?php echo $no++ ?></td>
-								<td><?php echo $data['namaalbum'] ?></td>
-								<td><?php echo $data['deskripsi'] ?></td>
-								<td><?php echo $data['tanggalbuat'] ?></td>
+								<td><img src="../aset/img/<?php echo $data['lokasifile'] ?>" width="100"></td>
+								<td><?php echo $data['judulfoto'] ?></td>
+								<td><?php echo $data['deskripsifoto'] ?></td>
+								<td><?php echo $data['tanggalunggah'] ?></td>
 								<td>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit <?php echo $data['albumid']; ?>">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit <?php echo $data['fotoid']; ?>">
   Edit
 </button>
-<div class="modal fade" id="edit <?php echo $data['albumid']; ?>">" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit <?php echo $data['fotoid']; ?>">" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -104,13 +106,33 @@ if ($_SESSION['status'] != 'login') {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="../config/aksi_album.php" method="POST">
-        	<input type="hidden" name="albumid" value="<?php echo $data['albumid'] ?>">
-        	<label class="form-label">Nama Album</label>
-							<input type="text" name="namaalbum" value="<?php echo $data ['namaalbum'] ?>" class="form-control" required>
+        <form action="../config/aksi_foto.php" method="POST">
+        	<input type="hidden" name="fotoid" value="<?php echo $data['fotoid'] ?>">
+        	<label class="form-label">Judul Foto</label>
+							<input type="text" name="judulfoto" value="<?php echo $data ['judulfoto'] ?>" class="form-control" required>
 							<label class="form-label">Deskripsi</label>
 							<textarea class="form_control"
-							 name="deskripsi" required><?php echo $data ['deskripsi'] ?></textarea>
+							 name="deskripsifoto" required><?php echo $data ['deskripsifoto'] ?></textarea>
+							 <label class="form-label">Album</label>
+                             <select class="form-control" name="albumid">
+                            <?php
+                            $sql_album = mysqli_query($koneksi, "SELECT * FROM album");
+                            while($data_album = mysqli_fetch_array($sql_album)) {?>
+                            <option <?php if($data_album ['albumid'] == $data['albumid']) { ?< selected="selected" >?php } ?> value="<?php echo $data_album['albumid'] ?>"><?php echo $data_album['namaalbum']?></option>
+                            <?php } ?>
+							</select>
+							<label class="form-label">Foto</label>
+							<div class="row">
+							<div class="col-md-4">
+								<img src="../aset/img/<?php echo $data['lokasifile'] ?>" width="100">
+							</div>
+							<div class="col-md-8">
+							<label class="form-label">File</label>
+							 <input type="file" class="form-control"  name="lokasifile">
+
+							</div>
+							</div>
+                             
       </div>
       <div class="modal-footer">
         <button type="submit" name="edit" class="btn btn-primary">Edit Data</button>
