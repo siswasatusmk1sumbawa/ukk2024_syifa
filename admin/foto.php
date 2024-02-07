@@ -54,7 +54,7 @@ if ($_SESSION['status'] != 'login') {
                             <?php
                             $sql_album = mysqli_query($koneksi, "SELECT * FROM album");
                             while($data_album = mysqli_fetch_array($sql_album)) {?>
-                            <option value="<?php echo $data_album['albumid'] ?>"><?php echo $ data_album['namaalbum']?></option>
+                            <option value="<?php echo $data_album['albumid'] ?>"><?php echo $data_album['namaalbum']?></option>
                             <?php } ?>
 							</select>
                              <label class="form-label">File</label>

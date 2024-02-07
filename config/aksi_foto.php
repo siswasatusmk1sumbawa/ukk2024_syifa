@@ -15,7 +15,7 @@ if (isset($_POST['tambah'])) {
 
     move_uploaded_file($temp, $lokasi.$namafoto);
 
-	$sql = mysqli_query($koneksi,"INSERT INTO foto VALUES ('','$judulfoto','$deskripsifoto','$tanggalunggah','$albumid','$userid')");
+	$sql = mysqli_query($koneksi,"INSERT INTO foto VALUES ('','$judulfoto','$deskripsifoto','$tanggalunggah','$namafoto','$albumid','$userid')");
 
 	echo "<script>
 	alert('Data berhasil disimpan!');
