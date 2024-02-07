@@ -39,4 +39,5 @@ $sql = mysqli_query($koneksi,"DELETE FROM album WHERE albumid='$albumid'");
 	alert('Data berhasil dihapus!');
 	location.href='../admin/album.php';
 	</script>";
+}
  ?>
