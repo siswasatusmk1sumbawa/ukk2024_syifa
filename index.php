@@ -17,8 +17,8 @@
       <div class="navbar-nav me-auto">
         
       </div>
-      <a href="register.php" class="btn btn-outline primary m-1">Daftar</a>
-      <a href="login.php" class="btn btn-outline primary m-1">Masuk</a>
+      <a href="register.php" class="btn btn-outline primary m-1">Sign-Up</a>
+      <a href="login.php" class="btn btn-outline primary m-1">Login</a>
     </div>
   </div>
 </nav>
