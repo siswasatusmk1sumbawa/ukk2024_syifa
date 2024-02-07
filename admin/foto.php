@@ -141,10 +141,10 @@ if ($_SESSION['status'] != 'login') {
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus <?php echo $data['albumid']; ?>">
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus <?php echo $data['fotoid']; ?>">
   Edit
 </button>
-<div class="modal fade" id="hapus <?php echo $data['albumid']; ?>">" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="hapus <?php echo $data['fotoid']; ?>">" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -152,9 +152,9 @@ if ($_SESSION['status'] != 'login') {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="../config/aksi_album.php" method="POST">
-        	<input type="hidden" name="albumid" value="<?php echo $data['albumid'] ?>">
-						Apakah anda yakin ingin menghapus foto ini <strong> <?php echo $data['namaalbum'] ?></strong> ?
+        <form action="../config/aksi_foto.php" method="POST">
+        	<input type="hidden" name="fotoid" value="<?php echo $data['fotoid'] ?>">
+						Apakah anda yakin ingin menghapus foto ini <strong> <?php echo $data['judulfoto'] ?></strong> ?
       </div>
       <div class="modal-footer">
         <button type="submit" name="hapus" class="btn btn-primary">Hapus Data</button>

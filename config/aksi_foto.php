@@ -41,13 +41,27 @@ if (isset($_POST['edit'])) {
 		$query = mysqli_query($koneksi, "SELECT * FROM foto WHERE fotoid='$fotoid'");
 		$data = mysqli_fetch_array($query);
 		if (is_file('../aset/img/'.$data ['lokasifile'])){
-			unlink('../aset/img/'.$data[lokasifile]);
+			unlink('../aset/img/'.$data['lokasifile']);
 		}
 		move_uploaded_file($temp, $lokasi.$namafoto);
 		$sql - mysqli_query($koneksi, "UPDATE foto SET judulfoto='$judulfoto',deskripsifoto='$deskripsifoto',tanggalunggah='$tanggalunggah', lokasifile='$namafile', albumid='$albumid' WHERE fotoid='$fotoid'");
 	}
 	echo "<script>
 	alert('Data berhasil diperbarui!');
+	location.href='../admin/foto.php';
+	</script>";
+}
+
+if (isset($_POST['hapus'])) {
+	$fotoid = $_POST['fotoid'];
+	$query = mysqli_query($koneksi, "SELECT * FROM foto WHERE fotoid='$fotoid'");
+		$data = mysqli_fetch_array($query);
+		if (is_file('../aset/img/'.$data ['lokasifile'])){
+			unlink('../aset/img/'.$data['lokasifile']);
+		}
+		$sql = mysqli_query($koneksi,"DELETE FROM foto WHERE fotoid='$fotoid'");
+		echo "<script>
+	alert('Data berhasil dihapus!');
 	location.href='../admin/foto.php';
 	</script>";
 }
