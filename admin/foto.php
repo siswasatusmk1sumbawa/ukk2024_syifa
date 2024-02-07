@@ -8,7 +8,7 @@ if ($_SESSION['status'] != 'login') {
 	</script>";
 }
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -27,10 +27,11 @@ if ($_SESSION['status'] != 'login') {
     </button>
     <div class="collapse navbar-collapse mt-2" id="navbarNavAltMarkup">
       <div class="navbar-nav me-auto">
-        <a href="album.php" class="nav-link">Album</a>
+        <a href="album.php" class="nav-link">Albums</a>
+		<a href="foto.php" class="nav-link">Photos</a>
       </div>
    
-      <a href="../config/aksi_logout.php" class="btn btn-outline danger m-1">Keluar</a>
+      <a href="../config/aksi_logout.php" class="btn btn-outline danger m-1">Logout</a>
     </div>
   </div>
 </nav>

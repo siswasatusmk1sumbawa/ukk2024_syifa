@@ -31,7 +31,7 @@ if ($_SESSION['status'] != 'login') {
         <a href="album.php" class="nav-link">Album</a>
       </div>
    
-      <a href="../config/aksi_logout.php" class="btn btn-outline danger m-1">Keluar</a>
+      <a href="../config/aksi_logout.php" class="btn btn-outline danger m-1">Logout</a>
     </div>
   </div>
 </nav>
