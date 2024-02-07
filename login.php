@@ -37,7 +37,7 @@
 					<label class="form-label">Password</label>
 					<input type="password" name="password" class="form-control" required>
 					<div class="d-grid mt-2">
-						<button class="btn btn-primary" type="submit" name="kirim">Kirim</button>
+						<button class="btn btn-primary" type="submit" name="kirim">Login</button>
 					</div>
 				</form>
 				<hr>

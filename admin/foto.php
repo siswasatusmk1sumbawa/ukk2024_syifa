@@ -35,19 +35,6 @@ if ($_SESSION['status'] != 'login') {
   </div>
 </nav>
 
-<div class="container mt-3">
-	<div class="row">
-		<div class="col-md-3">
-		<div class="card">
-			<img src="" class="card-img-top" title="" style="height: 12rem;">
-			<div class="card-footer text-center">
-				<a href="">10 Suka</a>
-				<a href="">3 Komentar</a>
-			</div>
-		</div>
-		</div>
-	</div>
-</div>
 
 <div class="container">
 	<div class="row">

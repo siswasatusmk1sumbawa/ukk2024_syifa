@@ -84,7 +84,7 @@ if ($_SESSION['status'] != 'login') {
 						</thead>
 						<tbody>
 							<?php
-							&no = 1;
+							$no = 1;
 							$userid = $_SESSION['userid'];
 							$sql = mysqli_query($koneksi, "SELECT * FROM album WHERE userid='$userid'");
 							while ($data = mysqli_fetch_array($sql)) {
