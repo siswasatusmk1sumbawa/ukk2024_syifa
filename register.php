@@ -17,8 +17,8 @@
       <div class="navbar-nav me-auto">
         
       </div>
-      <a href="register.php" class="btn btn-outline primary m-1">Daftar</a>
-      <a href="login.php" class="btn btn-outline primary m-1">Masuk</a>
+      <a href="register.php" class="btn btn-outline primary m-1">Sign-Up</a>
+      <a href="login.php" class="btn btn-outline primary m-1">Login</a>
     </div>
   </div>
 </nav>
@@ -29,7 +29,7 @@
 			<div class="card">
 				<div class="card-body bg-light">
 					<div class="text-center">
-						<h5>Daftar Akun Baru</h5>
+						<h5>Login New Account</h5>
 				</div>
 				<form action="config/aksi_register.php" method="POST">
 					<label class="form-label">Username</label>
@@ -43,11 +43,11 @@
 					<label class="form-label">Alamat</label>
 					<input type="text" name="alamat" class="form-control" required>
 					<div class="d-grid mt-2">
-						<button class="btn btn-primary" type="submit" name="kirim">Daftar</button>
+						<button class="btn btn-primary" type="submit" name="kirim">Sign-up</button>
 					</div>
 				</form>
 				<hr>
-				<p>Belum Punya akun? <a href="login.php">Login disini!</a></p>
+				<p>Already had an account? <a href="login.php">Login disini!</a></p>
 <footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
 	<p>&copy; UKK RPL 2024 | Syifa Ayudiva</p>
 </footer>

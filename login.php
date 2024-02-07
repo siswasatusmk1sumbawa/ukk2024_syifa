@@ -17,8 +17,8 @@
       <div class="navbar-nav me-auto">
         
       </div>
-      <a href="register.php" class="btn btn-outline primary m-1">Daftar</a>
-      <a href="login.php" class="btn btn-outline primary m-1">Masuk</a>
+      <a href="register.php" class="btn btn-outline primary m-1">Sign-Up</a>
+      <a href="login.php" class="btn btn-outline primary m-1">Login</a>
     </div>
   </div>
 </nav>
@@ -41,7 +41,7 @@
 					</div>
 				</form>
 				<hr>
-				<p>Belum Punya akun? <a href="register.php">Daftar disini!</a></p>
+				<p>Don't have an account? <a href="register.php">Sign-Up here!</a></p>
 <footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
 	<p>&copy; UKK RPL 2024 | Syifa Ayudiva</p>
 </footer>
