@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'konkeis.php';
+include 'koneksi.php';
 
 if (isset($_POST['tambah'])) {
 	$judulfoto = $_POST['judulfoto'];
