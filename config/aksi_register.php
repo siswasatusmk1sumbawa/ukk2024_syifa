@@ -1,5 +1,5 @@
 <?php 
-include "../koneksi.php";
+include 'koneksi.php';
 
 $username = $_POST['username'];
 $password = md5($_POST['password']);
