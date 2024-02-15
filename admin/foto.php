@@ -44,12 +44,12 @@ if ($_SESSION['status'] != 'login') {
 					<div class="card-body">
 						<form action="../config/aksi_foto.php" method="POST">
 							<label class="form-label">Judul Foto</label>
-							<input type="text" name="judulfoto" class="form-control" required>
+							<input type="text" name="judulfoto" value="<?php echo $data['judulfoto'] ?>" class="form-control" required>
 							<label class="form-label">Deskripsi</label>
 							<textarea class="form_control"
-							name="deskripsifoto" required></textarea>
+							name="deskripsifoto" required><?php echo $data['judulfoto'] ?></textarea>
                             <label class="form-label">Album</label>
-                            <select class="form-control" name="albumid">
+                            <select class="form-control" name="albumid" required>
                             <?php
                             $sql_album = mysqli_query($koneksi, "SELECT * FROM album");
                             while($data_album = mysqli_fetch_array($sql_album)) {?>
