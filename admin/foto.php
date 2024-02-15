@@ -93,11 +93,10 @@ if ($_SESSION['status'] != 'login') {
 								<td><?php echo $data['judulfoto'] ?></td>
 								<td><?php echo $data['deskripsifoto'] ?></td>
 								<td><?php echo $data['tanggalunggah'] ?></td>
-								<td>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit <?php echo $data['fotoid']; ?>">
 Edit
 </button>
-<div class="modal fade" id="edit <?php echo $data['fotoid']; ?>">" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit <?php echo $data['fotoid'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
     <div class="modal-content">
     <div class="modal-header">
@@ -142,7 +141,7 @@ Edit
 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus <?php echo $data['fotoid']; ?>">
 Edit
 </button>
-<div class="modal fade" id="hapus <?php echo $data['fotoid']; ?>">" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="hapus <?php echo $data['fotoid']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
     <div class="modal-content">
     <div class="modal-header">
@@ -151,7 +150,7 @@ Edit
     </div>
     <div class="modal-body">
         <form action="../config/aksi_foto.php" method="POST">
-        	<input type="hidden" name="fotoid" value="<?php echo $data['fotoid'] ?>">
+        <input type="hidden" name="fotoid" value="<?php echo $data['fotoid'] ?>">
 						Apakah anda yakin ingin menghapus foto ini <strong> <?php echo $data['judulfoto'] ?></strong> ?
     </div>
     <div class="modal-footer">
