@@ -85,7 +85,6 @@ if ($_SESSION['status'] != 'login') {
 							$userid = $_SESSION['userid'];
 							$sql = mysqli_query($koneksi, "SELECT * FROM album WHERE userid='$userid'");
 							while ($data = mysqli_fetch_array($sql)) {
-							}
 							?>
 							<tr>
 								<td><?php echo $no++ ?></td>
@@ -162,7 +161,7 @@ Edit
 </div>
 								</td>
 							</tr>
-							<?php  ?>
+							<?php } ?>
 						</tbody>
 					</table>
 		</div>
