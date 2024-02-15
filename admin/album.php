@@ -88,8 +88,7 @@ if ($_SESSION['status'] != 'login') {
 							$userid = $_SESSION['userid'];
 							$sql = mysqli_query($koneksi, "SELECT * FROM album WHERE userid='$userid'");
 							while ($data = mysqli_fetch_array($sql)) {
-							}
-							?>
+								?>
 							<tr>
 								<td><?php echo $no++ ?></td>
 								<td><?php echo $data['namaalbum'] ?></td>
@@ -108,48 +107,48 @@ Edit
     </div>
     <div class="modal-body">
         <form action="../config/aksi_album.php" method="POST">
-        	<input type="hidden" name="albumid" value="<?php echo $data['albumid'] ?>">
-        	<label class="form-label">Nama Album</label>
+        <input type="hidden" name="albumid" value="<?php echo $data['albumid'] ?>">
+        <label class="form-label">Nama Album</label>
 							<input type="text" name="namaalbum" value="<?php echo $data ['namaalbum'] ?>" class="form-control" required>
 							<label class="form-label">Deskripsi</label>
 							<textarea class="form_control"
 							name="deskripsi" required><?php echo $data ['deskripsi'] ?></textarea>
-      </div>
-      <div class="modal-footer">
+    </div>
+    <div class="modal-footer">
         <button type="submit" name="edit" class="btn btn-primary">Edit Data</button>
         </form>
-      </div>
     </div>
-  </div>
+    </div>
+</div>
 </div>
 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus <?php echo $data['albumid']; ?>">
-  Edit
+Hapus
 </button>
 <div class="modal fade" id="hapus <?php echo $data['albumid']; ?>">" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Data</h1>
+    <div class="modal-header">
+    <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Data</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
+    </div>
+    <div class="modal-body">
         <form action="../config/aksi_album.php" method="POST">
-        	<input type="hidden" name="albumid" value="<?php echo $data['albumid'] ?>">
-						Apakah anda yakin ingin menghapus foto ini <strong> <?php echo $data['namaalbum'] ?></strong> ?
-      </div>
-      <div class="modal-footer">
+        <input type="hidden" name="albumid" value="<?php echo $data['albumid'] ?>">
+						Apakah anda yakin ingin menghapus foto ini <strong> <?php echo $data['namaalbum'] ?>   </strong> ?
+    </div>
+    <div class="modal-footer">
         <button type="submit" name="hapus" class="btn btn-primary">Hapus Data</button>
         </form>
-      </div>
     </div>
-  </div>
+    </div>
 </div>
-								</td>
-							</tr>
-							<?php  ?>
-						</tbody>
-					</table>
-		</div>
+</div>
+	</td>
+	</tr>
+	<?php } ?>
+	</tbody>
+	</table>
+	</div>
 
 <footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
 	<p>&copy; UKK RPL 2024 | Syifa Ayudiva</p>
