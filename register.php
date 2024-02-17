@@ -8,19 +8,19 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container">
+<div class="container">
     <a class="navbar-brand" href="index.php">Website Galeri Foto</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse mt-2" id="navbarNavAltMarkup">
-      <div class="navbar-nav me-auto">
+    <div class="navbar-nav me-auto">
         
-      </div>
-      <a href="register.php" class="btn btn-outline primary m-1">Sign-Up</a>
-      <a href="login.php" class="btn btn-outline primary m-1">Login</a>
     </div>
-  </div>
+    <a href="register.php" class="btn btn-outline primary m-1">Sign-Up</a>
+    <a href="login.php" class="btn btn-outline primary m-1">Login</a>
+    </div>
+</div>
 </nav>
 
 <div class="container">

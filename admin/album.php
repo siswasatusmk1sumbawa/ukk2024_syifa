@@ -8,7 +8,6 @@ if ($_SESSION['status'] != 'login') {
 	</script>";
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -36,20 +35,6 @@ if ($_SESSION['status'] != 'login') {
 </div>
 </nav>
 
-<div class="container mt-3">
-	<div class="row">
-		<div class="col-md-3">
-		<div class="card">
-			<img src="" class="card-img-top" title="" style="height: 12rem;">
-			<div class="card-footer text-center">
-				<a href="">10 Suka</a>
-				<a href="">3 Komentar</a>
-			</div>
-		</div>
-		</div>
-	</div>
-</div>
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -67,7 +52,6 @@ if ($_SESSION['status'] != 'login') {
 					</div>
 				</div>
 		</div>
-
 		<div class="col-md-8">
 			<div class="card mt-2">
 				<div class="card-header"></div>
@@ -134,7 +118,7 @@ Hapus
     <div class="modal-body">
         <form action="../config/aksi_album.php" method="POST">
         <input type="hidden" name="albumid" value="<?php echo $data['albumid'] ?>">
-						Apakah anda yakin ingin menghapus foto ini <strong> <?php echo $data['namaalbum'] ?>   </strong> ?
+						Apakah anda yakin ingin menghapus foto ini <strong> <?php echo $data['namaalbum'] ?></strong> ?
     </div>
     <div class="modal-footer">
         <button type="submit" name="hapus" class="btn btn-primary">Hapus Data</button>

@@ -40,4 +40,4 @@ $sql = mysqli_query($koneksi,"DELETE FROM album WHERE albumid='$albumid'");
 	location.href='../admin/album.php';
 	</script>";
 }
- ?>
+?>
