@@ -14,8 +14,7 @@
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse mt-2" id="navbarNavAltMarkup">
-    <div class="navbar-nav me-auto">
-        
+    <div class="navbar-nav me-auto">  
     </div>
     <a href="register.php" class="btn btn-outline primary m-1">Sign-Up</a>
     <a href="login.php" class="btn btn-outline primary m-1">Login</a>
@@ -27,17 +26,17 @@
 	<div class="row">
 		<div class="col-md-3">
 		<div class="card">
-			<img src="" class="card-img-top" title="" style="height: 12rem;">
-			<div class="card-footer text-center">
-				<a href="">10 Suka</a>
-				<a href="">3 Komentar</a>
-			</div>
+		<img src="" class="card-img-top" title="" style="height: 12rem;">
+		<div class="card-footer text-center">
+		<a href="">10 Suka</a>
+		<a href="">3 Komentar</a>
+		</div>
 		</div>
 		</div>
 	</div>
 </div>
 
-<footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
+	<footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
 	<p>&copy; UKK RPL 2024 | Syifa Ayudiva</p>
 </footer>
 
