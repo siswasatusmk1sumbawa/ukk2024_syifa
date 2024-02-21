@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include 'koneksi.php';
 
@@ -10,20 +10,18 @@ $sql = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username' AND
 $cek = mysqli_num_rows($sql);
 
 if ($cek > 0) {
-	$data =mysqli_fetch_array($sql);
+	$data = mysqli_fetch_array($sql);
 
-	$_SESSION['username'] = $data['username'];
-	$_SESSION['userid'] = $data['userid'];
+	$_SESSION['username'] = $data['Username']; //sebelumnya penulisan setelah $data tidak memperhatikan kesamaan dengan nama kolom pada database
+	$_SESSION['userid'] = $data['UserID'];
 	$_SESSION['status'] = 'login';
 	echo "<script>
 	alert('Login Berhasil');
 	location.href='../admin/index.php';
 	</script>";
-}else{
+} else {
 	echo "<script>
 	alert('Username atau Password salah!');
 	location.href='../login.php';
 	</script>";
 }
-
-?>

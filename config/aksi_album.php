@@ -1,14 +1,19 @@
-<?php 
+<?php
 session_start();
 include 'koneksi.php';
+// $userid = $_SESSION['userid']; //pada kode sebelumnya, userid gagal tersimpan pada session, ini digunakan untuk membuktikan sebelum kode diperbaiki
+// echo $userid;
+
 
 if (isset($_POST['tambah'])) {
 	$namaalbum = $_POST['namaalbum'];
 	$deskripsi = $_POST['deskripsi'];
-	$tanggal = date['Y-m-d'];
+	$tanggal = date('Y-m-d'); //kesalahan pada sintak tanggal, sebelumnya dengan tanda []
 	$userid = $_SESSION['userid'];
 
-	$sql = mysqli_query($koneksi,"INSERT INTO album VALUES ('','$namaalbum','$deskripsi','$tanggal','$userid')");
+
+
+	$sql = mysqli_query($koneksi, "INSERT INTO album VALUES ('','$namaalbum','$deskripsi','$tanggal','$userid')");
 
 	echo "<script>
 	alert('Data berhasil disimpan!');
@@ -20,10 +25,10 @@ if (isset($_POST['edit'])) {
 	$albumid = $_POST['albumid'];
 	$namaalbum = $_POST['namaalbum'];
 	$deskripsi = $_POST['deskripsi'];
-	$tanggal = date['Y-m-d'];
+	$tanggal = date('Y-m-d');
 	$userid = $_SESSION['userid'];
 
-	$sql = mysqli_query($koneksi,"UPDATE album SET namaalbum='$namaalbum',deskripsi='$deskripsi',tanggalbuat='$tanggal' WHERE albumid='$albumid'");
+	$sql = mysqli_query($koneksi, "UPDATE album SET namaalbum='$namaalbum',deskripsi='$deskripsi',tanggalbuat='$tanggal' WHERE albumid='$albumid'");
 
 	echo "<script>
 	alert('Data berhasil diperbarui!');
@@ -33,11 +38,10 @@ if (isset($_POST['edit'])) {
 if (isset($_POST['hapus'])) {
 	$albumid = $_POST['albumid'];
 
-$sql = mysqli_query($koneksi,"DELETE FROM album WHERE albumid='$albumid'");
+	$sql = mysqli_query($koneksi, "DELETE FROM album WHERE albumid='$albumid'");
 
 	echo "<script>
 	alert('Data berhasil dihapus!');
 	location.href='../admin/album.php';
 	</script>";
 }
-?>

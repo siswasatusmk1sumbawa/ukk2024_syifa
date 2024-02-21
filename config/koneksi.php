@@ -1,14 +1,14 @@
-<?php 
+<?php
 $hostname = 'localhost';
 $userdb = 'root';
 $passdb = '';
-$namedb = 'ukk_syifa';
+$namedb = 'ukk_s';
 
-$koneksi = mysqli_connect($hostname,$userdb,$passdb,$namedb);
+$koneksi = mysqli_connect($hostname, $userdb, $passdb, $namedb);
 
-if ($koneksi) {
-echo "Terhubung";
-}else {
+if (!$koneksi) {
     echo "Tidak Terhubung";
-}
-?>
+} 
+// else {
+//     echo "Terhubung";
+// }
