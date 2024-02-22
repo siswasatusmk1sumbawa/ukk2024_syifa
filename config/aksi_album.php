@@ -4,7 +4,6 @@ include 'koneksi.php';
 // $userid = $_SESSION['userid']; //pada kode sebelumnya, userid gagal tersimpan pada session, ini digunakan untuk membuktikan sebelum kode diperbaiki
 // echo $userid;
 
-
 if (isset($_POST['tambah'])) {
 	$namaalbum = $_POST['namaalbum'];
 	$deskripsi = $_POST['deskripsi'];
